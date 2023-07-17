@@ -3,27 +3,6 @@ import string
 
 
 
-def mostrar_recomendaciones():
-    titulo = "¡Recomendaciones para crear contraseñas seguras!"
-    linea = "*" * 50
-
-    print(linea)
-    print(titulo.upper().center(50))
-    print(linea)
-    print("1. Sé creativo: Combina letras mayúsculas y minúsculas. (Ejemplo: AbCdEfG)")
-    print("2. Añade números y evita información personal obvia. (Ejemplo: P4$$w0rd)")
-    print("3. Utiliza caracteres especiales para mayor seguridad. (Ejemplo: MyP@$$w0rd!)")
-    print("4. Evita secuencias comunes o patrones predecibles. (Ejemplo: QWERTY123)")
-    print("5. Mantén la privacidad, evita datos personales. (Ejemplo: JohnDoe1985)")
-    print("6. Elige contraseñas con longitud suficiente. (Ejemplo: MyLongPassword123)")
-    print("7. No reutilices contraseñas en diferentes cuentas. (Ejemplo: !Password123 para cada cuenta)")
-    print("8. Actualiza tus contraseñas periódicamente. (Ejemplo: UpdatePassword2023!)")
-    print("9. Considera el uso de un gestor de contraseñas. (Ejemplo: LastPass, 1Password)")
-    print(linea)
-    print()
-
-mostrar_recomendaciones()
-
 
 def generar_contrasena(longitud):
     caracteres = string.ascii_letters + string.digits + string.punctuation
@@ -33,3 +12,16 @@ def generar_contrasena(longitud):
 
 generar_contrasena(int(input("Introduce el número de caracteres que quieres que contenga tu contraseña ")))
 
+# Todo el código unificado
+import random
+import string
+
+def generar_contrasena(longitud):
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+    contrasena = ''.join(random.choice(caracteres) for _ in range(longitud))
+    print("Su contraseña generada es:", contrasena_generada)
+    return contrasena
+
+longitud_deseada = int(input("Ingresa la longitud deseada para la contraseña: "))
+contrasena_generada = generar_contrasena(longitud_deseada)
+print("Contraseña generada:", contrasena_generada)
