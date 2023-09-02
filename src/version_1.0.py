@@ -12,7 +12,6 @@ def generar_contrasena(longitud):
 
 generar_contrasena(int(input("Introduce el número de caracteres que quieres que contenga tu contraseña ")))
 
-# Todo el código unificado
 import random
 import string
 
