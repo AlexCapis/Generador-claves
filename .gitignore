@@ -1,1 +1,4 @@
+# Se ignorarán los siguientes archivos:
 src/pruebas.py
+app/prueba.py
+notebooks/prueba.ipynb
