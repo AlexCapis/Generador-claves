@@ -1,6 +1,3 @@
-
-# VERSIÓN 2.0 
-
 import random
 import string
 
@@ -11,7 +8,7 @@ def generar_contrasena(longitud):
     # Permitimos al usuario especificar la longitud total deseada de la contraseña
     longitud -= 4  # Restamos 4 para tener en cuenta las categorías obligatorias
     if longitud < 1:
-        print("La longitud deseada es demasiado corta para generar una contraseña segura.")
+        print("La longitud deseada es demasiado corta para generar una contraseña segura. Mínimo debe contener 5 caracteres.")
         return None
 
     contrasena += random.choice(string.ascii_lowercase)  # Agregar una minúscula
@@ -28,5 +25,12 @@ def generar_contrasena(longitud):
     random.shuffle(contrasena_lista)
     contrasena = ''.join(contrasena_lista)
     
-    print("Su contraseña generada es:", contrasena)
+    # print("Su contraseña generada es:", contrasena)
     return contrasena
+
+# Solicita al usuario la longitud deseada para la contraseña
+longitud_deseada = int(input("Ingresa la longitud deseada para la contraseña: "))
+
+# Llama a la función generar_contrasena con la longitud especificada
+contrasena_generada = generar_contrasena(longitud_deseada)
+print("Contraseña generada:", contrasena_generada)
