@@ -5,7 +5,7 @@ import random
 st.set_page_config(page_title="PASSODI", page_icon=":key:", layout="wide")
 
 # Ponemos un titulo a nuestra aplicación
-st.title("Descubre PASSODI: Tu Escudo Digital")
+st.title("Descubre PASSODI: Tu Escudo Digital:shield:")
 
 # Texto de explicación
 texto = """
@@ -21,7 +21,7 @@ mostrar_home = True
 # Contenido de la versión 1.0
 if menu == 'VERSIÓN 1.0':
     mostrar_home = False
-    st.header(":shield: Versión 1.0: El Fundamento")
+    st.header(":globe_with_meridians: Versión 1.0: El Fundamento")
 
     texto_version_1 = '''
     Esta es la primera versión de PASSODI, un generador de contraseñas básico que consta de:
@@ -31,6 +31,7 @@ if menu == 'VERSIÓN 1.0':
     - **Generación Aleatoria:** Nuestro generador selecciona aleatoriamente caracteres de entre letras minúsculas, mayúsculas, dígitos y caracteres especiales. Estos caracteres se combinan para crear la contraseña.
 
     - **Contraseña Generada:** La contraseña generada se muestra al usuario.
+
     '''
     st.markdown(texto_version_1)
 
@@ -41,12 +42,106 @@ if menu == 'VERSIÓN 1.0':
         return contrasena
 
     # Interacción con el usuario para ingresar la longitud deseada de la contraseña
-    longitud_deseada = st.number_input(":key: Ingresa la longitud deseada para la contraseña, el mínimo permitido es 4 y el máximo 15:", min_value=4, value=15)
+    longitud_deseada = st.number_input(":key: Ingresa la longitud deseada para la contraseña (mínimo 5 caracteres):", min_value=5, value=15)
 
     # Botón para generar la contraseña
-    if st.button("Generar Contraseña"):
+    if st.button("Generar Contraseña Sencilla"):
         contrasena_generada = generar_contrasena(longitud_deseada)
         st.success("La contraseña generada contiene {} caracteres y es la siguiente: {}:".format(longitud_deseada, contrasena_generada))
+
+
+
+# Contenido de la versión 1.0
+if menu == 'VERSIÓN 2.0': 
+    mostrar_home = False
+    st.header(":lock: Versión 2.0: Potenciando la Versatilidad")
+
+    texto_version_2= '''
+En esta versión, hemos realizado mejoras significativas en el generador de contraseñas. Las principales características de la "Versión 2.0" incluyen:
+
+- **Caracteres Obligatorios:** Ahora, cada contraseña generada contendrá al menos una letra minúscula, una mayúscula, un número y un carácter especial. Esto garantiza que las contraseñas sean aún más seguras y resistentes a los ataques.
+
+- **Longitud Personalizada:** Hemos escuchado a nuestros usuarios y les ofrecemos la posibilidad de especificar la longitud exacta que desean para sus contraseñas. ¡Tú tienes el control total!
+
+- **Generación Eficiente:** Hemos optimizado el proceso de generación para que obtengas contraseñas seguras en menos tiempo.
+
+    '''
+    st.markdown(texto_version_2)
+
+    # Función para generar contraseñas seguras
+    def generar_contrasena(longitud):
+        caracteres = string.ascii_letters + string.digits + string.punctuation
+        contrasena = ''
+
+        # Permitimos al usuario especificar la longitud total deseada de la contraseña
+        longitud -= 4  # Restamos 4 para tener en cuenta las categorías obligatorias
+        if longitud < 1:
+            st.warning(":warning: La longitud deseada es demasiado corta para generar una contraseña segura. Mínimo debe contener 5 caracteres.")
+            return None
+
+        contrasena += random.choice(string.ascii_lowercase)  # Agregar una minúscula
+        contrasena += random.choice(string.ascii_uppercase)  # Agregar una mayúscula
+        contrasena += random.choice(string.digits)  # Agregar un número
+        contrasena += random.choice(string.punctuation)  # Agregar un carácter especial
+
+        # Generar el resto de la contraseña
+        for _ in range(longitud):
+            contrasena += random.choice(caracteres)
+        
+        # Mezclar los caracteres de la contraseña
+        contrasena_lista = list(contrasena)
+        random.shuffle(contrasena_lista)
+        contrasena = ''.join(contrasena_lista)
+        
+        return contrasena
+
+    # Interacción con el usuario para ingresar la longitud deseada de la contraseña
+    longitud_deseada = st.number_input(":key: Ingresa la longitud deseada para la contraseña (mínimo 5 caracteres):", min_value=5, value=12)
+
+    # Botón para generar la contraseña
+    if st.button("Generar Contraseña Versatil"):
+        contrasena_generada = generar_contrasena(longitud_deseada)
+        if contrasena_generada:
+            st.success("La contraseña generada contiene {} caracteres y es la siguiente: {}:".format(longitud_deseada, contrasena_generada))
+
+    # Nota explicativa
+    st.markdown(":bulb: **Recuerda** que una contraseña segura debe contener una combinación de letras mayúsculas y minúsculas, números y caracteres especiales.")
+
+
+# Contenido de la versión 3.0
+if menu == 'VERSIÓN 3.0':
+    mostrar_home = False
+    st.header(":gear: Versión 3.0: Personalización Avanzada")
+
+    texto_version_3 = '''
+    En esta nueva versión, hemos realizado mejoras significativas en el generador de contraseñas. Las principales características de la "Versión 3.0" incluyen:
+
+    - **Personaliza la Longitud:** Ahora puedes decidir exactamente cuántos caracteres deseas en tus contraseñas. ¡Tú tienes el control total de su longitud!
+
+    - **Selecciona los Tipos de Caracteres:** Elige entre varios tipos de caracteres para incluir en tu contraseña, como letras minúsculas, mayúsculas, números y caracteres especiales. ¡Adáptala a tus necesidades!
+
+    - **Excluye Caracteres Ambiguos:** Evita la confusión al excluir caracteres ambiguos como 'l', 'I', '1', '0', 'O' y 'o' de tus contraseñas. ¡Mantén la claridad!
+
+    '''
+    
+    st.markdown(texto_version_3)
+
+        # Interacción con el usuario para configurar las preferencias de contraseña
+    st.subheader("Configura las preferencias de tu contraseña:")
+    longitud_personalizada = st.number_input(" :key: Ingresa la longitud deseada para la contraseña (mínimo 5 caracteres):", min_value=5, value=12)
+    usar_mayusculas = st.checkbox(":ab: Incluir letras mayúsculas")
+    usar_numeros = st.checkbox(":1234: Incluir números")
+    usar_especiales = st.checkbox(":heavy_plus_sign: Incluir caracteres especiales")
+    excluye_ambiguos = st.checkbox(":warning: Excluir caracteres ambiguos (l, I, 1, 0, O)")
+
+        # Botón para generar la contraseña personalizada
+    if st.button("Generar Contraseña Personalizada"):
+        contrasena_generada = generar_contrasena(longitud_personalizada, usar_mayusculas, usar_numeros, usar_especiales, excluye_ambiguos)
+        st.success("La contraseña generada contiene {} caracteres y es la siguiente: {}:".format(longitud_personalizada, contrasena_generada))
+
+
+
+
 
 # Contenido de HOME
 if mostrar_home:
@@ -57,13 +152,9 @@ if mostrar_home:
     texto_home = '''
     Esta es la página de inicio de PASSODI, una aplicación para generar contraseñas seguras. Puedes seleccionar una de las versiones disponibles en el menú lateral para conocer más sobre cada versión y su funcionalidad.
 
-    ¡Explora las versiones y descubre cómo PASSODI puede ayudarte a proteger tus contraseñas!
+    :mag: ¡Explora las distintas versiones y descubre cómo PASSODI puede ayudarte a proteger tus contraseñas!
     '''
     st.write(texto_home)
-
-
-
-
 
 
 
