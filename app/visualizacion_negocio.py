@@ -126,6 +126,58 @@ if menu == 'VERSIÓN 3.0':
     
     st.markdown(texto_version_3)
 
+    def generar_contrasena(longitud, usar_mayusculas=True, usar_numeros=True, usar_especiales=True, excluye_ambiguos=True):
+        # Define los conjuntos de caracteres disponibles
+        caracteres = string.ascii_lowercase  # Inicialmente, solo incluye letras minúsculas
+        
+        # Agrega letras mayúsculas, números y caracteres especiales según las preferencias del usuario
+        if usar_mayusculas:
+            caracteres += string.ascii_uppercase
+        if usar_numeros:
+            caracteres += string.digits
+        if usar_especiales:
+            caracteres += string.punctuation
+        
+        # Excluye caracteres ambiguos si se selecciona esta opción
+        if excluye_ambiguos:
+            caracteres = ''.join(c for c in caracteres if c not in 'lI10Oo')
+        
+        # Verifica si la longitud especificada es suficiente
+        if longitud < 4:
+            print("La longitud deseada es demasiado corta para generar una contraseña segura. Mínimo debe ser 4.")
+            return None
+        
+        contrasena = []
+        
+        # Asegura que haya al menos un carácter de cada tipo seleccionado
+        if usar_mayusculas:
+            contrasena.append(random.choice(string.ascii_uppercase))
+        if usar_numeros:
+            contrasena.append(random.choice(string.digits))
+        if usar_especiales:
+            contrasena.append(random.choice(string.punctuation))
+        
+        # Genera el resto de la contraseña
+        while len(contrasena) < longitud:
+            contrasena.append(random.choice(caracteres))
+        
+        # Mezcla los caracteres de la contraseña para mayor seguridad
+        random.shuffle(contrasena)
+        
+        contrasena = ''.join(contrasena)
+        return contrasena
+
+
+
+
+
+
+
+
+
+
+
+
         # Interacción con el usuario para configurar las preferencias de contraseña
     st.subheader("Configura las preferencias de tu contraseña:")
     longitud_personalizada = st.number_input(" :key: Ingresa la longitud deseada para la contraseña (mínimo 5 caracteres):", min_value=5, value=12)

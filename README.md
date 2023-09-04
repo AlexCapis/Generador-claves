@@ -11,7 +11,7 @@
 
 
 
-- **app/:**El contenido de dicha carpeta es la visualización de todas las distintas versiones del generador de contraseñas a través de la aplicación web de Streamlit.
+- **app/:** El contenido de dicha carpeta es la visualización de todas las distintas versiones del generador de contraseñas a través de la aplicación web de Streamlit.
 
 
 - **notebooks/:** Esta carpeta alberga los notebooks de Jupyter utilizados para documentar y explicar el proyecto. Cada versión del generador de contraseñas tendrá su propio notebook correspondiente. El notebook `funcionamiento_generar_claves.ipynb` proporciona una descripción general y enlaces a las versiones específicas.
