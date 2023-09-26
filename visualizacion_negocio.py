@@ -190,7 +190,7 @@ if menu == 'VERSIÓN 3.0':
 # Contenido de HOME
 if mostrar_home:
     # Ponemos una imagen
-    imagen = "../docs/passodi_logo.png"
+    imagen = "docs/passodi_logo.png"
     imagen_cargada = st.image(imagen)
 
     texto_home = '''
