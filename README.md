@@ -81,11 +81,6 @@ En la Versión 4.0, estamos trabajando en la implementación de inteligencia art
 
 ## 5. Demostración en video
 
-A continuación podrás observar como se han implementado las diversas versiones a través de Streamlit con el fin de poder visualizar el trabajo de una forma dinámica, rápida y sencilla. 
-
-![Demostración en Video](docs/generador_contraseñas.gif)
-
-## Demostración en Video
 
 A continuación, puedes observar cómo se han implementado las diversas versiones del generador de contraseñas a través de Streamlit. Esta demostración te permitirá visualizar el proyecto de manera dinámica y comprender su funcionamiento de forma rápida y sencilla.
 
