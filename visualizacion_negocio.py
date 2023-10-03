@@ -171,7 +171,7 @@ if menu == 'VERSIÓN 3.0':
 
 
         # Interacción con el usuario para configurar las preferencias de contraseña
-    st.markdown("<h3 style='color: blue;'>Configura las preferencias de tu contraseña:</h3>", unsafe_allow_html=True)
+    st.subheader("Configura las preferencias de tu contraseña")
     longitud_personalizada = st.number_input(" :key: Ingresa la longitud deseada para la contraseña (mínimo 5 caracteres):", min_value=5, value=12)
     usar_mayusculas = st.checkbox(":ab: Incluir letras mayúsculas")
     usar_numeros = st.checkbox(":1234: Incluir números")
