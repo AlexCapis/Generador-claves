@@ -1,8 +1,8 @@
-# PASSODI: ¡Tu Escudo Digital!
+# PASSODI: ¡Tu Escudo Digital! 🛡️
 
 ![Logo](/docs/passodi_logo.png)
 
-#### Autor: [Alex Marzá Manuel](https://github.com/AlexCapis)
+#### Autor: [Alex Marzá Manuel](https://www.linkedin.com/in/alex-marza-data-science/)
 
 ## ÍNDICE
 
@@ -15,24 +15,24 @@
 7. [Agradecimientos](#7-agradecimientos)
 
 
-## 1. Acceso a la Aplicación
+## 🌐 1. Acceso a la Aplicación
 
 Puedes acceder a la aplicación del Generador de Contraseñas a través del siguiente enlace: [Generador de Contraseñas PASSODI](https://generador-claves.streamlit.app/). ¡Explora y experimenta la generación de contraseñas de forma interactiva y sencilla.
 
 
-## 2. Introducción
+## 🚀 2. Introducción
 
 ### Descripción del proyecto
 
 PASSODI es un proyecto que busca proporcionar a los usuarios una forma segura y conveniente de generar contraseñas sólidas para proteger sus cuentas en línea. En el mundo digital actual, la seguridad es de suma importancia, y las contraseñas seguras son esenciales para garantizar esa seguridad. Este proyecto aborda esta necesidad ofreciendo un generador de contraseñas robusto y fácil de usar.
 
-## 3. Desarrollo
+## 🔧 3. Desarrollo
 
 ### ¿Qué dificultades podemos encontrar?
 
 Durante el desarrollo de PASSODI, podríamos enfrentar desafíos como la optimización del algoritmo de generación de contraseñas, asegurando la eficiencia y seguridad en todas las versiones, y también la implementación exitosa de la inteligencia artificial para futuras versiones.
 
-## 4. Estructura de carpetas
+## 📁 4. Estructura de carpetas
 
 - [docs](https://github.com/AlexCapis/Generador-claves/tree/main/docs): Esta carpeta se utiliza para almacenar datos adicionales que puedan ser necesarios para el proyecto como  `generador_contraseñas.gif` y  `passodi_logo.png`
 
@@ -48,7 +48,7 @@ Durante el desarrollo de PASSODI, podríamos enfrentar desafíos como la optimiz
 
 -  [`visualizacion_negocio.py`](https://github.com/AlexCapis/Generador-claves/blob/main/visualizacion_negocio.py): Aquí podemos observar el código perteniente a Streamlit a través del cual realizamos la visualización de las distintas versiones del generados de contraseñas PASSODI.
 
-## 5. Breve explicación de las diversas versiones
+## 🔑 5. Breve explicación de las diversas versiones
 
 ### Versión 1.0 - "El Fundamento"
 
@@ -72,7 +72,7 @@ La Versión 3.0 introduce opciones avanzadas que permiten a los usuarios persona
 
 En la Versión 4.0, estamos trabajando en la implementación de inteligencia artificial para optimizar la generación de contraseñas y mejorar la fortaleza y seguridad de las contraseñas generadas. Además, planeamos incorporar contraseñas desechables ideales para situaciones de un solo uso o temporales.
 
-## 6. Demostración en video
+## 🎥 6. Demostración en video
 
 A continuación, puedes observar cómo se han implementado las diversas versiones del generador de contraseñas a través de Streamlit. Esta demostración te permitirá visualizar el proyecto de manera dinámica y comprender su funcionamiento de forma rápida y sencilla.
 
@@ -80,6 +80,6 @@ A continuación, puedes observar cómo se han implementado las diversas versione
 
 Siéntete libre de explorar las características de cada versión y cómo ha evolucionado el generador de contraseñas. Cada versión aporta mejoras significativas para garantizar contraseñas seguras y fáciles de usar.
 
-## 7. Agradecimientos
+## 🙏 7. Agradecimientos
 
 Espero que este proyecto te resulte útil y te sirva de ayuda. ¡Explora el contenido y siéntete libre de utilizar esta información para tomar decisiones informadas!
