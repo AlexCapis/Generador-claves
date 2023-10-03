@@ -2,7 +2,6 @@
 src/pruebas.py
 src/recomendaciones_1.0.py
 src/version_ultima.py
-app/prueba.py
 notebooks/prueba.ipynb
 notebooks/version_ultima.ipynb
 notebooks/generador_contraseñas_recomendaciones.ipynb

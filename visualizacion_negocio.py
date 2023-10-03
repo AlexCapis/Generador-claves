@@ -197,9 +197,8 @@ if mostrar_home:
     Esta es la página de inicio de PASSODI, una aplicación para generar contraseñas seguras. Puedes seleccionar una de las versiones disponibles en el menú lateral para conocer más sobre cada versión y su funcionalidad.
 
     :mag: ¡Explora las distintas versiones y descubre cómo PASSODI puede ayudarte a proteger tus contraseñas!
+
+    
     '''
     st.write(texto_home)
-
-
-
 
